@@ -1,0 +1,57 @@
+---
+
+firewalld_active: true
+
+firewalld_config_default_zone: public
+
+firewalld_service_enabled: true
+firewalld_service_name: firewalld.service
+firewalld_service_state: started
+
+firewalld_zone_dmz_ports: []
+#  - number: 8080
+#    protocol: tcp
+firewalld_zone_dmz_services:
+  - ssh
+
+firewalld_zone_external_ports: []
+#  - number: 8080
+#    protocol: tcp
+firewalld_zone_external_services:
+  - ssh
+
+firewalld_zone_home_ports: []
+#  - number: 8080
+#    protocol: tcp
+firewalld_zone_home_interfaces: []
+firewalld_zone_home_services:
+  - dhcpv6-client
+  - mdns
+  - samba
+  - samba-client
+  - ssh
+
+firewalld_zone_internal_interfaces: []
+firewalld_zone_internal_ports: []
+#  - number: 8080
+#    protocol: tcp
+firewalld_zone_internal_services:
+  - dhcpv6-client
+  - mdns
+  - samba
+  - samba-client
+  - ssh
+
+firewalld_zone_public_ports: []
+#  - number: 8080
+#    protocol: tcp
+firewalld_zone_public_services:
+  - dhcpv6-client
+  - ssh
+
+firewalld_zone_work_ports: []
+#  - number: 8080
+#    protocol: tcp
+firewalld_zone_work_services:
+  - dhcpv6-client
+  - ssh
