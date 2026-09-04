@@ -6,11 +6,11 @@
 {% for service in firewalld_zone_home_services %}
   <service name="{{ service }}"/>
 {% endfor %}
-{% for interface in firewalld_zone_home_interfaces %}
-  <interface name="{{ interface }}"/>
-{% endfor %}
 {% for port in firewalld_zone_home_ports %}
   <port port="{{ port.number }}" protocol="{{ port.protocol }}"/>
+{% endfor %}
+{% for interface in firewalld_zone_home_interfaces %}
+  <interface name="{{ interface }}"/>
 {% endfor %}
   <forward/>
 </zone>
